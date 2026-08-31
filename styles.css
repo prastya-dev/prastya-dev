@@ -100,10 +100,19 @@ h1, h2, h3, h4, .nav-logo, .hero-bg-text {
 }
 
 .nav-logo {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     text-decoration: none;
-    color: inherit;
+    color: var(--text-color);
+    display: flex;
+    align-items: baseline;
+    line-height: 1;
+    letter-spacing: -0.1em;
+}
+
+.logo-accent {
+    color: var(--accent);
+    margin-right: -0.05em;
 }
 
 .nav-links {
