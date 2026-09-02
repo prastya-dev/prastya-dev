@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.href = item.url;
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
-            link.className = 'tech-chip';
+            link.className = 'tech-chip glass-hover';
 
             const img = document.createElement('img');
             img.src = item.icon;
