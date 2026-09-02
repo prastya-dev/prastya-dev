@@ -411,9 +411,35 @@ h1, h2, h3, h4, .nav-logo, .hero-bg-text {
 }
 
 .about-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.stat-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    width: 100%;
+}
+
+.profile-photo-main {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    border-radius: 2rem;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.profile-photo-main:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
 .stat-card {
@@ -824,6 +850,10 @@ h1, h2, h3, h4, .nav-logo, .hero-bg-text {
     }
     
     .about-stats {
+        gap: 2rem;
+    }
+
+    .stat-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
