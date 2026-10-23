@@ -1,4 +1,10 @@
+// Prevents the reveal styles from hiding content if this file fails to load
+window.uiReady = true;
+
 document.addEventListener('DOMContentLoaded', () => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
     // Tech Categories Data
     const techCategories = {
         infra: [
@@ -58,158 +64,196 @@ document.addEventListener('DOMContentLoaded', () => {
             link.href = item.url;
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
-            link.className = 'tech-chip glass-hover';
+            link.className = 'tech-chip';
 
             const img = document.createElement('img');
             img.src = item.icon;
-            img.alt = item.name;
-            img.onerror = () => {
-                img.style.display = 'none';
-            };
+            img.alt = '';
+            img.width = 20;
+            img.height = 20;
+            img.loading = 'lazy';
+            img.decoding = 'async';
+            img.onerror = () => img.remove();
 
             const text = document.createElement('span');
-            text.innerText = item.name;
+            text.textContent = item.name;
 
-            link.appendChild(img);
-            link.appendChild(text);
+            link.append(img, text);
             skillsContainer.appendChild(link);
         });
     }
 
-    // Custom Cursor
-    const cursorDot = document.getElementById('cursorDot');
-    const cursorOutline = document.getElementById('cursorOutline');
-    
-    // Check if device supports hover
-    const isTouchDevice = () => {
-        return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+    // Mobile navigation
+    const nav = document.getElementById('nav');
+    const navToggle = document.getElementById('navToggle');
+
+    const setMenu = (open) => {
+        if (!nav || !navToggle) return;
+        nav.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', String(open));
+        navToggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+        if (open) nav.classList.remove('hidden');
     };
 
-    if (!isTouchDevice()) {
-        let mouseX = 0;
-        let mouseY = 0;
-        let outlineX = 0;
-        let outlineY = 0;
+    navToggle?.addEventListener('click', () => {
+        setMenu(!nav?.classList.contains('open'));
+    });
+
+    // Close the menu after choosing any link (including the logo)
+    nav?.addEventListener('click', (e) => {
+        if (e.target.closest('a')) setMenu(false);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (nav?.classList.contains('open') && !nav.contains(e.target)) setMenu(false);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav?.classList.contains('open')) {
+            setMenu(false);
+            navToggle?.focus();
+        }
+    });
+
+    window.matchMedia('(min-width: 769px)').addEventListener?.('change', (e) => {
+        if (e.matches) setMenu(false);
+    });
+
+    // Custom Cursor (only for devices with a real mouse)
+    const cursorDot = document.getElementById('cursorDot');
+    const cursorOutline = document.getElementById('cursorOutline');
+
+    if (!isTouchDevice && cursorDot && cursorOutline && !reducedMotion) {
+        document.documentElement.classList.add('cursor-custom');
+
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let outlineX = mouseX;
+        let outlineY = mouseY;
 
         window.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
-            
             cursorDot.style.left = `${mouseX}px`;
             cursorDot.style.top = `${mouseY}px`;
-        });
+        }, { passive: true });
 
-        // Smooth outline follow
         const animateCursor = () => {
-            let distX = mouseX - outlineX;
-            let distY = mouseY - outlineY;
-            
-            outlineX = outlineX + (distX * 0.15);
-            outlineY = outlineY + (distY * 0.15);
-            
+            outlineX += (mouseX - outlineX) * 0.15;
+            outlineY += (mouseY - outlineY) * 0.15;
             cursorOutline.style.left = `${outlineX}px`;
             cursorOutline.style.top = `${outlineY}px`;
-            
             requestAnimationFrame(animateCursor);
         };
         animateCursor();
 
-        // Cursor hover states
-        const interactiveElements = document.querySelectorAll('a, button, .project-item');
-        interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
+        document.addEventListener('mouseover', (e) => {
+            if (e.target instanceof Element && e.target.closest('a, button, .project-item')) {
                 cursorOutline.classList.add('hover');
-            });
-            el.addEventListener('mouseleave', () => {
+            }
+        });
+
+        document.addEventListener('mouseout', (e) => {
+            if (e.target instanceof Element && e.target.closest('a, button, .project-item')) {
                 cursorOutline.classList.remove('hover');
-            });
+            }
         });
     }
 
-    // Hero Animations
-    setTimeout(() => {
-        // Animate hero text stagger
-        const revealTexts = document.querySelectorAll('.reveal-text');
-        revealTexts.forEach((el, index) => {
-            setTimeout(() => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-                el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-            }, index * 200 + 500); // Wait for name to animate first
-        });
+    // Hero intro animation
+    const heroTexts = document.querySelectorAll('.reveal-text');
+    heroTexts.forEach((el, index) => {
+        setTimeout(() => el.classList.add('active'), 400 + index * 150);
+    });
 
-        // Animate name characters
-        const chars = document.querySelectorAll('.char');
-        chars.forEach((char, index) => {
-            setTimeout(() => {
-                char.style.transform = 'translateY(0)';
-                char.style.transition = 'transform 0.8s cubic-bezier(0.87, 0, 0.13, 1)';
-            }, index * 100);
-        });
-    }, 100);
+    const chars = document.querySelectorAll('.char');
+    chars.forEach((char, index) => {
+        setTimeout(() => char.classList.add('active'), 150 + index * 90);
+    });
 
-    // Scroll Animations (Intersection Observer)
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
+    // Count-up animation for the stats
+    const animateCount = (el) => {
+        if (el.dataset.animated) return;
+        el.dataset.animated = 'true';
+
+        const target = parseInt(el.dataset.count, 10) || 0;
+        if (reducedMotion) {
+            el.textContent = target;
+            return;
+        }
+
+        const duration = 1200;
+        const start = performance.now();
+        const step = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(target * eased);
+            if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
     };
 
-    const revealOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
+    // Scroll animations
+    const revealElements = document.querySelectorAll('.reveal-up');
+
+    if ('IntersectionObserver' in window) {
+        const revealOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
                 entry.target.classList.add('active');
-                
-                // Animate numbers if it's a stats section
-                const statNumbers = entry.target.querySelectorAll('.stat-number');
-                statNumbers.forEach(stat => {
-                    if (!stat.dataset.animated) {
-                        const target = parseInt(stat.getAttribute('data-count'));
-                        let current = 0;
-                        const increment = target / 50; // frames
-                        
-                        const updateCount = () => {
-                            if (current < target) {
-                                current += increment;
-                                stat.innerText = Math.ceil(current);
-                                requestAnimationFrame(updateCount);
-                            } else {
-                                stat.innerText = target;
-                            }
-                        };
-                        updateCount();
-                        stat.dataset.animated = 'true';
-                    }
-                });
-                
+                entry.target.querySelectorAll('.stat-number').forEach(animateCount);
                 observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+            });
+        }, { root: null, rootMargin: '0px', threshold: 0.1 });
 
-    document.querySelectorAll('.reveal-up').forEach(el => {
-        revealOnScroll.observe(el);
-    });
+        revealElements.forEach((el) => revealOnScroll.observe(el));
+    } else {
+        revealElements.forEach((el) => el.classList.add('active'));
+        document.querySelectorAll('.stat-number').forEach(animateCount);
+    }
 
-    // Parallax effect on hero background text
+    // Single throttled scroll handler: hide nav, parallax, active link
     const bgText = document.querySelector('.hero-bg-text');
-    window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        if (scrolled < window.innerHeight) {
-            bgText.style.transform = `translate(-50%, calc(-50% + ${scrolled * 0.5}px))`;
-        }
-    });
-
-    // Hide/Show Nav on scroll
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const topLinks = Array.from(document.querySelectorAll('.nav-link'));
     let lastScrollY = window.scrollY;
-    const nav = document.getElementById('nav');
+    let ticking = false;
+
+    const onScroll = () => {
+        const y = window.scrollY;
+
+        if (nav) {
+            if (!nav.classList.contains('open') && y > lastScrollY && y > 120) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+        }
+        lastScrollY = y;
+
+        if (bgText && !reducedMotion && window.innerWidth > 768 && y < window.innerHeight) {
+            bgText.style.transform = `translate(-50%, calc(-50% + ${y * 0.5}px))`;
+        }
+
+        let current = '';
+        sections.forEach((section) => {
+            if (y + 160 >= section.offsetTop) current = section.id;
+        });
+        // The last section can never reach the top of the viewport
+        if (y + window.innerHeight >= document.documentElement.scrollHeight - 2 && sections.length) {
+            current = sections[sections.length - 1].id;
+        }
+        topLinks.forEach((link) => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+        });
+
+        ticking = false;
+    };
 
     window.addEventListener('scroll', () => {
-        if (lastScrollY < window.scrollY && window.scrollY > 100) {
-            nav.classList.add('hidden');
-        } else {
-            nav.classList.remove('hidden');
+        if (!ticking) {
+            requestAnimationFrame(onScroll);
+            ticking = true;
         }
-        lastScrollY = window.scrollY;
-    });
+    }, { passive: true });
 });
