@@ -1,7 +1,7 @@
 👋 Hi, I'm Prastya Ardhi Ramadhan
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:2563eb,100:06b6d4&height=200&section=header&text=PDEV&fontSize=55&fontColor=ffffff&fontAlignY=38&desc=Cloud%20Computing%20%7C%20DevOps%20%7C%20Web%20Development&descAlignY=60&descSize=15" width="100%" alt="PDEV Banner"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:2563eb,100:06b6d4&height=200&section=header&text=PRASTYA-DEV&fontSize=55&fontColor=ffffff&fontAlignY=38&desc=Cloud%20Computing%20%7C%20DevOps%20%7C%20Web%20Development&descAlignY=60&descSize=15" width="100%" alt="PDEV Banner"/>
 </p><p align="center">
   <a href="https://dhyy.cloud">
     <img src="https://img.shields.io/badge/Portfolio-dhyy.cloud-06b6d4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/>
