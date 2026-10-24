@@ -1,301 +1,97 @@
-# Prastya Ardhi Ramadhan
-### `prastya-dev` · Ngawi, Jawa Timur 🇮🇩
+👋 Hey, I'm Prast!
 
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:2563eb,100:06b6d4&height=200&section=header&text=DHYY.CLOUD&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Building%20Ideas%20Into%20Reality&descAlignY=58&descSize=16" width="100%" alt="Dhyy Cloud banner" />
+</p><p align="center">
+  <a href="https://dhyy.cloud">
+    <img src="https://img.shields.io/badge/Website-dhyy.cloud-0f172a?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" />
+  </a>
+  <a href="https://github.com/dhyy.cloud">
+    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</p><p align="center">
+  <b>Developer • Tech Enthusiast • Lifelong Learner</b>
+</p>---
 
+🚀 About Me
 
-![Cloud](https://img.shields.io/badge/☁️_Cloud_Computing-1D9E75?style=flat-square)
+Hi there! Welcome to my GitHub profile.
 
+I'm Dhyy, a technology enthusiast who enjoys exploring the digital world, learning new technologies, and building creative projects.
 
+- 🌐 Website: "dhyy.cloud" (https://dhyy.cloud)
+- 💻 Interested in software development and web technologies
+- 🧠 Always learning, experimenting, and improving
+- 🛠️ Enjoy building projects and exploring new ideas
+- 🎯 Focused on continuous learning and personal growth
+- 🤝 Open to collaboration, new ideas, and exciting projects
 
-
-![DevOps](https://img.shields.io/badge/⚙️_DevOps-185FA5?style=flat-square)
-
-
-
-
-![Web Dev](https://img.shields.io/badge/🌐_Web_Developer-534AB7?style=flat-square)
-
-
+«"Great things are built one line of code at a time."»
 
 ---
 
-## 👤 About Me
+🧰 Tech Stack
 
-Mahasiswa **Universitas Siber Asia** asal Ngawi, Jawa Timur. Fokus membangun aplikasi web berperforma tinggi dengan pengalaman pengguna yang luar biasa.
+Technologies I work with or am interested in learning.
 
-| 🗓️ Pengalaman | 📦 Proyek | 🛠️ Teknologi |
-|:---:|:---:|:---:|
-| 3+ Tahun | 20+ Selesai | 10+ Dikuasai |
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,nodejs,python,php,mysql,git,github,vscode&perline=7" alt="Technology icons" />
+</p>---
+
+📊 GitHub Statistics
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=dhyy.cloud&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="165" alt="GitHub statistics" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dhyy.cloud&layout=compact&theme=tokyonight&hide_border=true" height="165" alt="Most used languages" />
+</p><p align="center">
+  <img src="https://streak-stats.demolab.com?user=dhyy.cloud&theme=tokyonight&hide_border=true" width="70%" alt="GitHub contribution streak" />
+</p><p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=dhyy.cloud&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6" width="100%" alt="GitHub trophies" />
+</p>---
+
+📈 Contribution Activity
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=dhyy.cloud&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="GitHub contribution activity graph" />
+</p>---
+
+🌐 Find Me Online
+
+<p align="center">
+  <a href="https://dhyy.cloud">
+    <img src="https://img.shields.io/badge/Website-Visit%20My%20Site-06b6d4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" />
+  </a>
+  <a href="https://github.com/dhyy.cloud">
+    <img src="https://img.shields.io/badge/GitHub-Follow%20Me-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile" />
+  </a>
+</p>---
+
+💭 Developer Mindset
+
+const dhyy = {
+  username: "dhyy.cloud",
+  mindset: "Keep learning, keep building",
+  interests: [
+    "Technology",
+    "Software Development",
+    "Creative Projects"
+  ],
+  goals: [
+    "Learn something new every day",
+    "Build useful projects",
+    "Grow as a developer"
+  ],
+  motto: "Turning ideas into reality"
+};
+
+console.log("Hello, world! 👋");
 
 ---
 
-## 🛠️ Tech Stack & Tools
-
-**☁️ Cloud & Infra**
-
-
-
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
-
- 
-
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-
- 
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-
- 
-
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
-
- 
-
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
-
- 
-
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-
- 
-
-![Hostinger](https://img.shields.io/badge/Hostinger-673DE6?style=flat-square&logo=hostinger&logoColor=white)
-
- 
-
-![PM2](https://img.shields.io/badge/PM2-2B037A?style=flat-square&logo=pm2&logoColor=white)
-
-
-
-**🎨 Frontend**
-
-
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-
- 
-
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-
- 
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-
- 
-
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-
- 
-
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-
- 
-
-![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=flat-square&logo=vuedotjs&logoColor=4FC08D)
-
- 
-
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-
- 
-
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-
-
-
-**⚙️ Backend**
-
-
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-
- 
-
-![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
-
- 
-
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white)
-
- 
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-
-
-
-**🗄️ Database & ORM**
-
-
-
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-
- 
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-
- 
-
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
-
- 
-
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
-
-
-
-**🔧 Hardware & OS**
-
-
-
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
-
- 
-
-![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
-
- 
-
-![Fedora](https://img.shields.io/badge/Fedora-51A2DA?style=flat-square&logo=fedora&logoColor=white)
-
- 
-
-![MikroTik](https://img.shields.io/badge/MikroTik-293239?style=flat-square&logo=mikrotik&logoColor=white)
-
-
-
-**🧰 Tools & AI**
-
-
-
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-
- 
-
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-
- 
-
-![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
-
- 
-
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
-
- 
-
-![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?style=flat-square&logo=openai&logoColor=white)
-
- 
-
-![Claude](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
-
- 
-
-![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)
-
- 
-
-![After Effects](https://img.shields.io/badge/After_Effects-9999FF?style=flat-square&logo=adobeaftereffects&logoColor=white)
-
- 
-
-![Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&logo=adobephotoshop&logoColor=white)
-
-
-
----
-
-## 🚀 Projects
-
-### [01 · jack-agent](https://github.com/prastya-dev/jack-agent)
-> AI assistant terminal (CLI/TUI) dengan mode chat & exec, OAuth2, multi-model.
-
-
-
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-
- 
-
-![CLI](https://img.shields.io/badge/CLI-333?style=flat-square)
-
- 
-
-![AI](https://img.shields.io/badge/AI-8E75B2?style=flat-square)
-
-
-
-### [02 · kasir-apps](https://github.com/prastya-dev/kasir-apps)
-> Sistem POS & manajemen kasir — transaksi, inventaris, laporan keuangan.
-
-
-
-![Web App](https://img.shields.io/badge/Web_App-185FA5?style=flat-square)
-
- 
-
-![POS](https://img.shields.io/badge/POS-333?style=flat-square)
-
- 
-
-![Database](https://img.shields.io/badge/Database-4479A1?style=flat-square&logo=mysql&logoColor=white)
-
-
-
-### [03 · EdlinkMark](https://github.com/prastya-dev/EdlinkMark)
-> PWA monitor kuis & tugas EdLink UNSIA, login NIM, dukungan mode offline.
-
-
-
-![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white)
-
- 
-
-![EdLink](https://img.shields.io/badge/EdLink-1D9E75?style=flat-square)
-
- 
-
-![Offline](https://img.shields.io/badge/Offline_Support-333?style=flat-square)
-
-
-
----
-
-## 🏅 Certifications
-
-- ☁️ **Use APIs to Work with Cloud Storage** — Google Cloud Skills Boost · Jul 2026
-- 🛡️ **Discover and Protect Sensitive Data** — Google Cloud Skills Boost · Jul 2026
-- 🤖 **Develop AI-Powered Prototypes (Gemini)** — Google Cloud Skills Boost · Jul 2026
-- ⚡ **Build Serverless Apps with Cloud Run** — Google · Jul 2026
-- 🧩 **Arcade Adventure: Low-Code Development** — Google Cloud Arcade · Jul 2026
-- 📦 **Arcade Voyage: Cloud Storage & Data Governance** — Google Cloud Arcade · Jul 2026
-- 💬 **Create Your First Gemini Enterprise App** — Google · Jul 2026
-- 🔧 **App Building with AppSheet** — Google · Jul 2026
-
----
-
-## 📬 Contact
-
-[
-
-![Email](https://img.shields.io/badge/Email-devprastya@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)
-
-](mailto:devprastya@gmail.com)
-[
-
-![LinkedIn](https://img.shields.io/badge/LinkedIn-prastya--dev-0A66C2?style=flat-square&logo=linkedin&logoColor=white)
-
-](https://linkedin.com/in/prastya-dev)
-[
-
-![GitHub](https://img.shields.io/badge/GitHub-prastya--dev-181717?style=flat-square&logo=github&logoColor=white)
-
-](https://github.com/prastya-dev)
-[
-
-![Website](https://img.shields.io/badge/Website-dhyy.cloud-1D9E75?style=flat-square&logo=googlechrome&logoColor=white)
-
-](https://dhyy.cloud)
-
----
-
-*Built with passion · © 2026 Prastya Ardhi Ramadhan*
+<p align="center">
+  <i>Thanks for visiting my profile!</i>
+  <br />
+  <b>Keep creating. Keep exploring. Keep growing. 🚀</b>
+</p><p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:06b6d4,50:2563eb,100:0f172a&height=100&section=footer" width="100%" alt="Footer banner" />
+</p>
